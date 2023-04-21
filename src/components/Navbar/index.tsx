@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, Icon, Text } from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
@@ -13,6 +13,8 @@ import RightContent from "./RightContent";
 import SearchInput from "./SearchInput";
 import router from "next/router";
 import useDirectory from "../../hooks/useDirectory";
+import { FaSatelliteDish } from "react-icons/fa";
+
 
 const Navbar: React.FC = () => {
   const [user] = useAuthState(auth);
@@ -34,12 +36,9 @@ const Navbar: React.FC = () => {
         cursor="pointer"
         onClick={() => onSelectMenuItem(defaultMenuItem)}
       >
-        <Image src="/images/redditFace.svg" height="30px" />
-        <Image
-          display={{ base: "none", md: "unset" }}
-          src="/images/redditText.svg"
-          height="46px"
-        />
+        <Icon as={FaSatelliteDish} fontSize={30} color="red.300" />
+        <Text marginLeft={"15px"} fontSize={"30px"} fontWeight={"bold"} fontFamily={"monospace"}>Unico</Text>
+
       </Flex>
       {user && <Directory />}
       <SearchInput user={user as User} />

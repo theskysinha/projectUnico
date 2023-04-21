@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
-import { FaReddit } from "react-icons/fa";
+import { FaSatelliteDish } from "react-icons/fa";
 
 const PersonalHome: React.FC = () => {
   return (
@@ -21,17 +21,16 @@ const PersonalHome: React.FC = () => {
         height="34px"
         borderRadius="4px 4px 0px 0px"
         fontWeight={600}
-        bgImage="url(/images/redditPersonalHome.png)"
         backgroundSize="cover"
       ></Flex>
       <Flex direction="column" p="12px">
         <Flex align="center" mb={2}>
-          <Icon as={FaReddit} fontSize={50} color="brand.100" mr={2} />
+          <Icon as={FaSatelliteDish} fontSize={25} color="brand.100" mr={2} />
           <Text fontWeight={600}>Home</Text>
         </Flex>
         <Stack spacing={3}>
           <Text fontSize="9pt">
-            Your personal Reddit frontpage, built for you.
+            Welcome to Unico, the front page of Bennett.
           </Text>
           <Button height="30px">Create Post</Button>
           <Button variant="outline" height="30px">

@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuItem, Flex, Icon, Text, Box } from "@chakra-ui/react";
-import { FaReddit } from "react-icons/fa";
+import { FaSatelliteDish } from "react-icons/fa";
 import { GrAdd } from "react-icons/gr";
 import MenuListItem from "./MenuListItem";
 import { CommunitySnippet } from "../../../atoms/communitiesAtom";
@@ -32,7 +32,7 @@ const MyCommunities: React.FC<MyCommunitiesProps> = ({ snippets, setOpen }) => {
           key={snippet.communityId}
           displayText={`r/${snippet.communityId}`}
           link={`r/${snippet.communityId}`}
-          icon={FaReddit}
+          icon={FaSatelliteDish}
           iconColor="blue.500"
         />
       ))}
